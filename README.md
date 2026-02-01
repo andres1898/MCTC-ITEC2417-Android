@@ -1,0 +1,4 @@
+# MCTC-ITEC2417-Android
+Android Mobile Programming - Minneapolis College Spring 2025
+
+This course introduces students to Android application development. You will learn skills and techniques that are used to create mobile apps for the Android platform. You will work with a variety of Android components and use these to develop apps that take advantage of the unique features of a mobile device; while managing constraints imposed by these devices. You will gain experience designing, coding, testing, and troubleshooting applications. You will also gain experience in user interface design, teamwork, the Android development environment and supporting developer tools. Before starting the class, you must be familiar with at least one high-level programming language, object-oriented programming concepts, and use of an IDE. 
