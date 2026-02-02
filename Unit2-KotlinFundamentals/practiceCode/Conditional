@@ -1,0 +1,17 @@
+/**
+ * Sp26 ITEC 2417 - Android Programming - Corin Dennison
+ * Minneapolis College
+ * Week 1 - Kotlin Basics
+ */
+
+fun main() {
+    val trafficLightColor = "Amber"
+    
+    val message =
+    if (trafficLightColor == "Red") "Stop"
+    else if (trafficLightColor == "Yellow") "Slow"
+    else if (trafficLightColor == "Green") "Go"
+    else "Invalid traffic light color"
+    
+    println(message)
+}
