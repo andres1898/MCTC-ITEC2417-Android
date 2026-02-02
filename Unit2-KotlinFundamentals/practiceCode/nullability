@@ -1,0 +1,49 @@
+/**
+ * Sp26 ITEC 2417 - Android Programming - Corin Dennison
+ * Minneapolis College
+ * Week 2 - Kotlin Fundamentals
+ */
+
+fun main() {
+    var favoriteActor = null //no value is associated to this varaible yet
+    println(favoriteActor) // this variable can still being in use
+    //favoriteActor = "Michael B. Jordan" //it can not be reassigned
+
+/**
+ * you can not create a null value if you assigned a value type to the variable already
+ */       
+  
+    var favoriteActress: String = "Catherine Ohara" 
+    //favoriteActress = null
+    //> Null cannot be a value of a non-null type 'String'
+    println(favoriteActress)
+    
+ /**
+ * You need to create a nullable type 
+ * var name: type? = value
+ */    
+ 	var favoriteMovie: String? = "Mulan"
+    favoriteMovie = null
+    println(favoriteMovie)
+ 
+ /**
+ * To handle nullable variable, alway has to use synthax
+ * variable?.method/property
+ * otherwise you would have an error
+ */    
+    var favoriteShow: String? = "Adolescent"
+    println(favoriteShow?.length)
+    //println(favoriteActor.length) //this not works
+    
+    //null simple check point
+    
+    favoriteSong: String? = null
+
+    if(favoriteSong != null) {
+      println("The number of characters in your favorite song tittle is ${favoriteActor.length}.")
+    } else {
+      println("You didn't input a tittle.")
+    }
+
+    
+}
