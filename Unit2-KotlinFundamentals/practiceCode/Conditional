@@ -4,14 +4,45 @@
  * Week 1 - Kotlin Basics
  */
 
+// if/else statement are the same as in Java
+fun main() {
+    val trafficLightColor = "Black"
+
+    if (trafficLightColor == "Red") { //evaluation
+        println("Stop") //output
+    } else if (trafficLightColor == "Yellow") {
+        println("Slow")
+    } else if (trafficLightColor == "Green") {
+        println("Go")
+    } else {
+        println("Invalid traffic-light color")
+    }
+
+}
+
+//when statements, new, no Java nor python have them
+fun main() {
+    val trafficLightColor = "Yellow"
+//used mostly to assign a valur gived a condition or rules
+    when (trafficLightColor) { //execute the action based on trafficLightColor value
+        "Red" -> println("Stop")
+        "Yellow" -> println("Slow")
+        "Green" -> println("Go")
+        else -> println("Invalid traffic-light color")
+    }
+}
+
+//reduce synthax is so cool, a lot of assumption but clear code
 fun main() {
     val trafficLightColor = "Amber"
-    
-    val message =
-    if (trafficLightColor == "Red") "Stop"
+
+// this will assigns the value of message based on the conditionals 
+    val message = //no need of () or {}
+    if (trafficLightColor == "Red") "Stop" // structure like if/else (condition) output
     else if (trafficLightColor == "Yellow") "Slow"
     else if (trafficLightColor == "Green") "Go"
     else "Invalid traffic light color"
-    
+
+//print the message value
     println(message)
 }
