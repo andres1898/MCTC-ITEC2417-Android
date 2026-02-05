@@ -1,0 +1,38 @@
+/**
+ * Sp26 ITEC 2417 - Android Programming - Corin Dennison
+ * Minneapolis College
+ * Week 4 - Kotlin Fundamentals
+ * Funtion types and lambda expressions
+ * source https://www.youtube.com/watch?v=yx4CY_OUZok
+ */
+
+data class Cats(val name: String, val age: Int)
+
+
+fun main() {
+    // a lambda expression is a way to create a function without create the statement
+    // it will behaves like a variable, but inside the {} will excute the commands and return the value
+    val greeting = {println("Hello world!")}
+    //we can call the variable like we will do with a function
+    greeting()
+    
+    //lambda expr with parameters
+    //to let know what to return we use ->
+    val sum = {a: Int, b: Int -> println(a + b)}
+    sum(1,1)
+    // the result values can be saved in a new variable
+    val result = sum(1,1)
+    println(result)
+    
+    val cats = listOf(
+        Cats("Tom", 3),
+        Cats("Patrick", 2),
+        Cats("Gary", 1),
+        Cats("Mario", 8)    
+    )
+    
+    //get the oldest cat in the list
+    val oldestCat = cats.maxBy {cats -> cats.age}
+    println("${oldestCat.name} is the oldest cat, he is ${oldestCat.age}")
+    
+}
