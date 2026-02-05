@@ -1,0 +1,43 @@
+/**
+ * Sp26 ITEC 2417 - Android Programming - Corin Dennison
+ * Minneapolis College
+ * Week 4 - Kotlin Fundamentals
+ */
+
+fun main() {
+    val child = 5
+    val adult = 28
+    val senior = 87
+    
+    val isMonday = true
+    
+    var price = ticketPrice(child, isMonday)    
+    println("The movie ticket price for a person aged $child is \$$price.")
+    
+    price = ticketPrice(adult, isMonday)
+    println("The movie ticket price for a person aged $adult is \$$price.")
+    
+    price = ticketPrice(senior, isMonday)
+    println("The movie ticket price for a person aged $senior is \$$price.")
+    
+}
+
+fun ticketPrice(age: Int, isMonday: Boolean): Int {
+    // Fill in the code.
+    var price: Int
+    
+    if (age < 12) {
+        price = 15
+    } else if (13 < age && age < 60) {
+        price = 30
+        if (isMonday) {
+            price = price - 5
+        }
+    } else if (61 < age && age < 100) {
+        price = 20
+    } else {price = -1}
+    
+    return price
+    
+    
+}
