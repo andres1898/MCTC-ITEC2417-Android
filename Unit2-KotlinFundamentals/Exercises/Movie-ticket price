@@ -41,3 +41,12 @@ fun ticketPrice(age: Int, isMonday: Boolean): Int {
     
     
 }
+
+fun ticketPriceLambda(age: Int, isMonday: Boolean): Int { // it takes an Int and Boolean and return an Integer
+    return when(age) { //return instead of creating temp variable. When statement bc is a list of conditions
+        in 0..12 -> 15 //create a range with the synthax "in int..int" assigns a value with ->
+        in 13..60 -> if (isMonday) 25 else 30 //condition in lambda format, "if (condition) true-action else false-action"
+        in 61..100 -> 20
+        else -> -1 //final of the list
+    }
+}
