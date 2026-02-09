@@ -1,0 +1,40 @@
+/**
+ * Sp26 ITEC 2417 - Android Programming - Corin Dennison
+ * Minneapolis College
+ * Week 4 - Kotlin Fundamentals
+ * Practice exercises
+ */
+
+fun main() {    
+    val amanda = Person("Amanda", 33, "play tennis", null)
+    val atiqah = Person("Atiqah", 28, "climb", amanda)
+    
+    amanda.showProfile()
+    atiqah.showProfile()
+}
+
+
+class Person(val name: String, val age: Int, val hobby: String?, val referrer: Person?) {
+    fun showProfile() {
+        //no conditional print statements
+        println("Name: $name")
+        println("Age: $age")
+        //condition if hobby is not null
+        if(hobby != null) {
+            print("Likes to $hobby. ")
+        }
+        //another condition, if referrer is not null
+        if(referrer != null) {
+            print("Has a referrer named ${referrer.name}")
+            // nested condition
+            if(referrer.hobby != null) {
+                print(", who likes to ${referrer.hobby}.")
+            } else {
+                print(".")
+            }
+        } else {
+            print("Doesn't have a referrer.")
+        }
+        print("\n\n")
+    }
+}
