@@ -1,0 +1,28 @@
+/**
+ * Sp26 ITEC 2417 - Android Programming - Corin Dennison
+ * Minneapolis College
+ * Week 4 - Kotlin Fundamentals
+ * Practice exercises
+ */
+
+class Song ( //intializer
+    val title: String,
+    val artist: String,
+    val yearPublished: Int,
+    val playCount: Int
+){
+    
+    val isPopular: Boolean
+    	get() = playCount >= 1000 //get the value of the boolean if the condition is true or false
+    
+    fun printDescription() {
+        println("$title, performed by $artist, was released in $yearPublished.")
+    }
+    
+}
+
+fun main() {    
+    val GoldenSong = Song("Golden", "Huntrix Cast", 2025, 1000000)
+    GoldenSong.printDescription()
+    println(GoldenSong.isPopular)
+}
