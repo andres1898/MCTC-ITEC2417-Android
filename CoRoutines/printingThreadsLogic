@@ -1,0 +1,30 @@
+/* Assynchronus programing
+ * 
+ * 
+ * 
+ * */
+
+import kotlinx.coroutines.*
+
+fun printingThreads() = runBlocking { //control word to be a coroutine method
+    
+    println("Program Starts")
+    
+    launch {        //first thread
+        delay(1000) //hold to continue for X miliseconds
+        println("First task completed")
+    }
+    
+    launch {        //second thread
+        delay(500)
+        println("Second task completed")
+    }
+    
+    println("Continues") //this is not a threat, it will print right away
+}
+
+fun main() {
+    println("Main begining")
+    printingThreads()
+    println("Main end")
+}
