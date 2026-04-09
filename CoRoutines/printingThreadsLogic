@@ -6,7 +6,7 @@
 
 import kotlinx.coroutines.*
 
-fun printingThreads() = runBlocking { //control word to be a coroutine method
+fun printingThreads() = runBlocking { //keyword to be a coroutine method
     
     println("Program Starts")
     
